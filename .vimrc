@@ -29,16 +29,15 @@ set cmdheight=2
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
+" if has("patch-8.1.1564")
+"   " Recently vim can merge signcolumn and number column into one
+"   set signcolumn=number
+" else
+"   set signcolumn=yes
+" endif
 
 
-" xmap <leader>fo  <Plug>(coc-format-selected)
-" nmap <leader>fo  <Plug>(coc-format-selected)
+nmap <leader>fi  :CocFix<CR>
 au BufRead,BufNewFile *.S set filetype=gas
 
 " By default, Vim doesn't let you hide a buffer (i.e. have a buffer that isn't
@@ -131,7 +130,9 @@ call plug#end()
 "vimtex options
 let g:tex_flavor='latex'
 "let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
+let g:vimtex_quickfix_mode=1
+let g:vimtex_quickfix_open_on_warning=0
+let g:vimtex_quickfix_ignore_filters = ['LaTeX Font Warning']
 " set conceallevel=1
 " let g:tex_conceal='abdmg'
 " hi Conceal ctermbg=none

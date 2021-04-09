@@ -52,7 +52,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
-# unsetopt correct_all  
+# unsetopt correct_all
 # setopt correct
 
 # Uncomment the following line to display red dots whilst waiting for completion.
@@ -83,7 +83,7 @@ plugins=(
     git
     z
     zsh-syntax-highlighting
-    zsh-autosuggestions 
+    zsh-autosuggestions
     tmux
     fzf
     command-not-found
@@ -95,6 +95,7 @@ plugins=(
     golang
     zsh-interactive-cd
     docker
+    hitchhiker
 )
 source $ZSH/oh-my-zsh.sh
 autoload -U compinit && compinit
@@ -102,7 +103,7 @@ autoload -U compinit && compinit
 # User configuration
 
 # Vim shortcuts
-bindkey -v 
+bindkey -v
 
 bindkey '^ ' autosuggest-accept
 bindkey '^r' fzf-history-widget
@@ -140,6 +141,7 @@ zplug "rupa/z", use:z.sh
 alias meow=~/scripts/cat.sh
 alias chop=~/scripts/changeopacity.sh
 alias vim=nvim
+alias tsw="tmux switch -t"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

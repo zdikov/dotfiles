@@ -6,7 +6,7 @@ shell:
   args:
     - -l
     - -c
-    - "tmux attach || tmux"
+    # - "tmux attach || tmux"
     - "tmux"
 
 # Colors (Tender)
@@ -41,7 +41,7 @@ window:
     columns: 87 
     lines: 39
 
-  title: ""
+  title: "Alacritty"
   dynamic_title: false
   position:
     x: 0
