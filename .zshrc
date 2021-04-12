@@ -142,6 +142,7 @@ alias meow=~/scripts/cat.sh
 alias chop=~/scripts/changeopacity.sh
 alias vim=nvim
 alias tsw="tmux switch -t"
+alias bat=batcat
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
