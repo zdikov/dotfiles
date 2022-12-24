@@ -38,6 +38,9 @@ set cmdheight=2
 
 
 nmap <leader>fi  :CocFix<CR>
+nmap <leader>di  :CocDiagnostics<CR>
+nmap <leader>a   :CocAction<CR>
+vmap <leader>a   :CocAction<CR>
 au BufRead,BufNewFile *.S set filetype=gas
 
 " By default, Vim doesn't let you hide a buffer (i.e. have a buffer that isn't
@@ -111,9 +114,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Plug 'bkad/CamelCaseMotion'
 " Plug 'dense-analysis/ale' "Code analysis
-" Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mhinz/vim-startify'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive' " Errors
 " Plug 'preservim/tagbar'
 Plug 'adelarsq/vim-matchit'
 " Plug 'jpalardtimeouty/vim-slime'
@@ -123,6 +126,7 @@ Plug 'jacoborus/tender.vim'
 Plug 'shime/vim-livedown'
 Plug 'shirk/vim-gas'
 " Plug 'easymotion/vim-easymotion'
+Plug 'fatih/vim-go'
 call plug#end()
 
 " let g:slime_target = "vimterminal"
@@ -241,6 +245,9 @@ noremap <leader>fc :%y+<CR>
 
 " Past without indent
 noremap <leader>v "+p
+
+" Clear search highlighting
+nnoremap <nowait><silent> <C-C> :noh<CR>
 
 " nnoremap <silent> <c-p> :exe "resize " . (winheight(0) * 3/2)<CR>
 " nnoremap <silent> <c-m> :exe "resize " . (winheight(0) * 2/3)<CR>

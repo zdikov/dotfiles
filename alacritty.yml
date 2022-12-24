@@ -35,11 +35,10 @@ colors:
     cyan:    '0x73cef4'
     white:   '0xfeffff'
     
- 
 window:
   dimensions:
     columns: 87 
-    lines: 39
+    lines: 45
 
   title: "Alacritty"
   dynamic_title: false
@@ -50,21 +49,22 @@ window:
     x: 0
     y: 0
   dynamic_padding: false
-  decorations: full
+  decorations: none
 
 scrolling:
   history: 10000
   multiplier: 3
+
 font:
   normal:
     family: FiraMono Nerd Font
-    style: Regular
+    style: Medium
   bold:
     family: FiraMono Nerd Font
     style: Bold
   italic:
     family: FiraMono Nerd Font
-    style: Italic
+    style: Regular
   size: 14.0
   offset:
     x: 0

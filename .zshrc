@@ -140,9 +140,12 @@ zplug "rupa/z", use:z.sh
 # alias :q=exit
 alias meow=~/scripts/cat.sh
 alias chop=~/scripts/changeopacity.sh
+alias toggleop=~/scripts/toggle_alacritty_opacity.sh
 alias vim=nvim
 alias tsw="tmux switch -t"
 alias bat=batcat
+alias arc=git
+alias st="git status"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
