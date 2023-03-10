@@ -118,7 +118,6 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mhinz/vim-startify'
 " Plug 'tpope/vim-fugitive' " Errors
 " Plug 'preservim/tagbar'
-Plug 'adelarsq/vim-matchit'
 " Plug 'jpalardtimeouty/vim-slime'
 Plug 'simeji/winresizer'
 " Plug 'jremmen/vim-ripgrep'
