@@ -36,6 +36,15 @@ set cmdheight=2
 "   set signcolumn=yes
 " endif
 
+nnoremap <silent> K :call ShowDocumentation()<CR>
+" Show hover when provider exists, fallback to vim's builtin behavior.
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('definitionHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
 
 nmap <leader>fi  :CocFix<CR>
 nmap <leader>di  :CocDiagnostics<CR>
