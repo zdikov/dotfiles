@@ -257,6 +257,12 @@ noremap <leader>v "+p
 " Clear search highlighting
 nnoremap <nowait><silent> <C-C> :noh<CR>
 
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " nnoremap <silent> <c-p> :exe "resize " . (winheight(0) * 3/2)<CR>
 " nnoremap <silent> <c-m> :exe "resize " . (winheight(0) * 2/3)<CR>
 
