@@ -7,7 +7,8 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
-let mapleader = " "
+set scrolloff=8
+let mapleader = ","
 
 let t:is_transparent = 1
 function! Toggle_transparent_background()
@@ -235,7 +236,7 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 " nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
 
 nmap <leader>; :Files<CR>
-nmap , :Buffers<CR>
+nmap <leader>. :Buffers<CR>
 
 " set termwinsize=5x0
 
