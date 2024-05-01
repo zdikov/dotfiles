@@ -28,15 +28,6 @@ set updatetime=300
 set shortmess+=c
 set cmdheight=2
 
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-" if has("patch-8.1.1564")
-"   " Recently vim can merge signcolumn and number column into one
-"   set signcolumn=number
-" else
-"   set signcolumn=yes
-" endif
-
 nnoremap <silent> K :call ShowDocumentation()<CR>
 " Show hover when provider exists, fallback to vim's builtin behavior.
 function! ShowDocumentation()
@@ -211,8 +202,8 @@ inoremap <C-l> <C-^>
 " let g:cpp_experimental_simple_template_highlight = 1
 " let g:cpp_concepts_highlight = 1
 
-
 nmap <leader>t :NERDTreeToggle <CR>
+let NERDTreeQuitOnOpen=1
 
 nmap <leader>u :UndotreeToggle <CR>
 

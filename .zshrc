@@ -5,10 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+if [ -d "$HOME/go/bin" ] ; then
+    PATH="$HOME/go/bin:$PATH"
+fi
 
-# Path to your oh-my-zsh installation.
 export ZSH="/home/zdikov/.oh-my-zsh"
 export PATH="/home/zdikov/.local/bin:$PATH"
 
@@ -92,7 +92,6 @@ plugins=(
     pip
     npm
     zsh-completions
-    golang
     zsh-interactive-cd
     docker
     hitchhiker
@@ -138,14 +137,10 @@ zplug "rupa/z", use:z.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 # alias :q=exit
-alias meow=~/scripts/cat.sh
-alias chop=~/scripts/changeopacity.sh
 alias toggleop=~/scripts/toggle_alacritty_opacity.sh
 alias vim=nvim
-alias tsw="tmux switch -t"
 alias bat=batcat
 alias arc=git
-alias st="git status"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -155,3 +150,13 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/home/zdikov/yandex-cloud/path.bash.inc' ]; then source '/home/zdikov/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/home/zdikov/yandex-cloud/completion.zsh.inc' ]; then source '/home/zdikov/yandex-cloud/completion.zsh.inc'; fi
+
+source /home/zdikov/yandex-cloud/completion.zsh.inc
+
+[ -f "/home/zdikov/.ghcup/env" ] && source "/home/zdikov/.ghcup/env" # ghcup-env
