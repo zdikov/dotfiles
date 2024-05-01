@@ -157,6 +157,4 @@ if [ -f '/home/zdikov/yandex-cloud/path.bash.inc' ]; then source '/home/zdikov/y
 # The next line enables shell command completion for yc.
 if [ -f '/home/zdikov/yandex-cloud/completion.zsh.inc' ]; then source '/home/zdikov/yandex-cloud/completion.zsh.inc'; fi
 
-source /home/zdikov/yandex-cloud/completion.zsh.inc
-
 [ -f "/home/zdikov/.ghcup/env" ] && source "/home/zdikov/.ghcup/env" # ghcup-env
